@@ -1,4 +1,4 @@
-# Tailscaled-Mullvad-Signer-Py
+# Tailscale-Mullvad-Signer
 
 This Python script automates the process of signing Mullvad nodes in a Tailscale network. It fetches the Tailscale lock status, identifies unsigned Mullvad nodes, and signs them automatically.
 
@@ -13,12 +13,12 @@ This Python script automates the process of signing Mullvad nodes in a Tailscale
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/privateoutlaw/Tailscaled-Mullvad-Signer-Py.git
+   git clone https://github.com/privateoutlaw/Tailscale-Mullvad-Signer.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd Tailscaled-Mullvad-Signer-Py
+   cd Tailscale-Mullvad-Signer
    ```
 
 3. Ensure the script is executable:
