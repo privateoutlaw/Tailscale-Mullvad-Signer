@@ -2,7 +2,6 @@
 
 import json
 import subprocess
-import time
 
 def get_tailscale_status():
     """Fetch the Tailscale lock status as JSON."""
@@ -30,11 +29,10 @@ def main():
         return
 
     print("signing Mullvad nodes...")
-
-    for node in nodes_mullvad:
-        print(f"signing {node['Name']}")
-        subprocess.run(["tailscale", "lock", "sign", node["NodeKey"]])
-        time.sleep(0.1)
+    
+    # Sign all nodes in a single command
+    node_keys = [node["NodeKey"] for node in nodes_mullvad]
+    subprocess.run(["tailscale", "lock", "sign"] + node_keys)
 
     print("all Mullvad nodes successfully signed")
 
